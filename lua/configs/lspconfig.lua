@@ -8,5 +8,6 @@ local servers = {
 	"pyright",
 	"jsonls",
 	"bashls",
+	"qmlls",
 }
 vim.lsp.enable(servers)
