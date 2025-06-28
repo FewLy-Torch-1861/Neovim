@@ -7,4 +7,7 @@ return {
     "3rd/image.nvim",
   },
   lazy = false,
+  config = function()
+    vim.keymap.set("n", "<C-n>", ":Neotree filesystem toggle left<CR>", { desc = "Toggle file browser" })
+  end
 }

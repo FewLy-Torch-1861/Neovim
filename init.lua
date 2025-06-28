@@ -38,13 +38,6 @@ require("lazy").setup("plugins")
 -- Setup Keymaps
 require("mappings")
 
--- Colorscheme
-require("catppuccin").setup()
-vim.cmd.colorscheme "catppuccin-mocha"
-
--- Telescope
-require("telescope").setup()
-
 -- Treesitter
 require("nvim-treesitter.configs").setup({
   auto_install = true,
