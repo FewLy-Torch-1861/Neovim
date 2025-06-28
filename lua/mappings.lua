@@ -1,5 +1,7 @@
 local map = vim.keymap.set
 
+map("n", "<Esc>", "<cmd>noh<CR>", { desc = "Clear highlights" })
+
 -- Quick focus windows
 map("n", "<C-h>", "<CMD>wincmd h<CR>", { desc = "Focus left" })
 map("n", "<C-j>", "<CMD>wincmd j<CR>", { desc = "Focus down" })
