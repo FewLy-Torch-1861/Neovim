@@ -8,6 +8,6 @@ return {
   },
   lazy = false,
   config = function()
-    vim.keymap.set("n", "<C-n>", ":Neotree filesystem toggle left<CR>", { desc = "Toggle file browser" })
+    vim.keymap.set("n", "<C-n>", "<CMD>Neotree filesystem toggle left<CR>", { desc = "Toggle file browser" })
   end
 }
