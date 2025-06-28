@@ -34,13 +34,5 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Setup lazy.nvim
 require("lazy").setup("plugins")
-
--- Setup Keymaps
+require("options")
 require("mappings")
-
--- Treesitter
-require("nvim-treesitter.configs").setup({
-  auto_install = true,
-  highlight = { enable = true },
-  indent = { enable = true }
-})
