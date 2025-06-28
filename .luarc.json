@@ -1,6 +1,6 @@
 {
-    "diagnostics.globals": [
-        "bufnr",
-        "vim"
-    ]
+  "diagnostics.globals": [
+    "bufnr",
+    "vim"
+  ]
 }
