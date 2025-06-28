@@ -15,3 +15,10 @@ map("n", "<C-l>", "<CMD>wincmd l<CR>", { desc = "Focus right" })
 
 -- Ctrl + S to save
 map("n", "<C-s>", "<CMD>w<CR>", { desc = "Save buffer" })
+
+-- Buffer
+map("n", "<Tab>", "<CMD>BufferNext<CR>", { desc = "Buffer Next" })
+map("n", "<S-Tab>", "<CMD>BufferPrevious<CR>", { desc = "Buffer Previous" })
+map("n", "<leader>x", "<CMD>BufferClose<CR>", { desc = "Buffer Close" })
+map("n", "<leader>n", "<CMD>enew<CR>", { desc = "Buffer New" })
+
