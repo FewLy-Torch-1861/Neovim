@@ -11,3 +11,6 @@ vim.cmd.set "cursorline"
 
 -- Clipboard
 vim.cmd.set "clipboard+=unnamedplus"
+
+-- Leaderkey
+vim.g.mapleader= " "
