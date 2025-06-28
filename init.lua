@@ -32,28 +32,11 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-local plugins = {
-  -- Catppuccin colorscheme
-  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-
-  -- Telescope
-  {
-    "nvim-telescope/telescope.nvim",
-    dependencies = { "nvim-lua/plenary.nvim" }
-  },
-
-  -- Treesitter
-  {
-    "nvim-treesitter/nvim-treesitter",
-    branch = 'master',
-    lazy = false,
-    build = ":TSUpdate"
-  },
-}
-local opts = {}
-
 -- Setup lazy.nvim
-require("lazy").setup({ plugins, opts })
+require("lazy").setup("plugins")
+
+-- Setup Keymaps
+require("mappings")
 
 -- Colorscheme
 require("catppuccin").setup()
@@ -61,12 +44,6 @@ vim.cmd.colorscheme "catppuccin-mocha"
 
 -- Telescope
 require("telescope").setup()
-local telebuiltin = require("telescope.builtin")
-vim.keymap.set("n", "<leader>ff", telebuiltin.find_files, { desc = "Telescope find files" })
-vim.keymap.set("n", "<leader>fg", telebuiltin.live_grep, { desc = "Telescope live grep" })
-vim.keymap.set("n", "<leader>fz", telebuiltin.current_buffer_fuzzy_find, { desc = "Telescope find in current buffer" })
-vim.keymap.set("n", "<leader>fb", telebuiltin.buffers, { desc = "Telescope buffers" })
-vim.keymap.set("n", "<leader>fh", telebuiltin.help_tags, { desc = "Telescope help tags" })
 
 -- Treesitter
 require("nvim-treesitter.configs").setup({
