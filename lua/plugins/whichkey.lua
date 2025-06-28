@@ -8,5 +8,5 @@ return {
       width = { min = 20 },
       spacing = 1,
     },
-  }
+  },
 }
