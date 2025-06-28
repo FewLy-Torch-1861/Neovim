@@ -11,3 +11,7 @@ vim.cmd.set "cursorline"
 
 -- Clipboard
 vim.cmd.set "clipboard+=unnamedplus"
+
+vim.opt.swapfile = false
+
+vim.wo.number = true

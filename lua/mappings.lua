@@ -1,6 +1,11 @@
 local map = vim.keymap.set
 
-map("n", "<Esc>", "<cmd>noh<CR>", { desc = "Clear highlights" })
+map("n", "<leader>h", "<cmd>noh<CR>", { desc = "Clear highlights" })
+map("n", ";", ":", {})
+
+-- Comment
+map("n", "<leader>/", "gcc", { desc = "toggle comment", remap = true })
+map("v", "<leader>/", "gc", { desc = "toggle comment", remap = true })
 
 -- Quick focus windows
 map("n", "<C-h>", "<CMD>wincmd h<CR>", { desc = "Focus left" })
